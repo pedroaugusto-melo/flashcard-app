@@ -1,14 +1,13 @@
-import { useSelector } from "react-redux";
 import NewTopic from "./new-topic/NewTopic";
-import { selectTopics } from "./topicsSlice";
+import YourTopics from "./your-topics/YourTopics";
+import SearchTopic from "./search-topic/SearchTopic";
 import './Topics.css';
 
 export default function Topics() {
-    const topics = useSelector(selectTopics);
-
     return (
-        <div>
-            {console.log(topics)}
+        <div className="Topics">
+            <SearchTopic />
+            <YourTopics />
             <NewTopic />
         </div>
     );

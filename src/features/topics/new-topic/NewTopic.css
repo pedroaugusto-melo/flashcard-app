@@ -1,5 +1,5 @@
 .NewTopic {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 85%;
     max-width: 500px;
     display: flex;
@@ -9,6 +9,7 @@
     background-color: #0077B6;
     border-radius: 20px;
     color: #FFFFFF;
+    overflow: hidden;
 }
 
 .input-field {
@@ -60,6 +61,7 @@
     width: 60%;
     height: 40px;
     background-color: #FFFFFF;
+    color: #000000;
     font-size: 20px;
     font-weight: 700;
 }

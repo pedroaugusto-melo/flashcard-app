@@ -1,0 +1,22 @@
+.TopicBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.TopicContent {
+    display: flex;
+}
+
+.TopicContent h3 {
+    margin: 7.5px 7.5px 0 0;
+    font-weight: 400;
+}
+
+.TopicBody button {
+    border: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #FFFFFF;
+}

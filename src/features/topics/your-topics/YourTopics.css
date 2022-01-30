@@ -1,0 +1,17 @@
+.YourTopics {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.YourTopics h2 {
+    text-align: left;
+}
+
+.YourTopics h4 {
+    font-weight: 500;
+}
+
+.YourTopics .Topics {
+    list-style: none;
+    padding: 0;
+}

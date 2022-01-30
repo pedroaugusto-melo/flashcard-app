@@ -1,0 +1,36 @@
+.form-card {
+    box-sizing: border-box;
+    padding-bottom: 25px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ADB5BD;
+    border-radius: 20px;
+    color: #000000;
+    overflow: hidden;
+}
+
+.form-card .input-field {
+    font-size: 18px;
+    width: 85%;
+    display: flex;
+    align-items: center;   
+}
+
+.form-card .input-field label {
+    width: 60px;
+    text-align: left;
+}
+
+.form-card input {
+    height: 22.5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 0;
+    width: 70%;
+}
