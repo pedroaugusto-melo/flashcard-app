@@ -1,0 +1,9 @@
+.SearchDeck input {
+    box-sizing: border-box;
+    margin: 10px auto;
+    border: 1px solid #ADB5BD;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px 10px;
+}

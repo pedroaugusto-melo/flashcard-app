@@ -4,7 +4,7 @@ import btnTopics from '../../img/btn-topics.png';
 import btnAdd from '../../img/btn-add.png';
 import btnDecks from '../../img/btn-decks.png';
 
-import './Menu.css';
+import './MenuApp.css';
 
 export default function Menu() {
     return (

@@ -5,6 +5,8 @@ import { selectAllTopics } from "../topics/topicsSlice";
 import NewCard from "./NewCard/NewCard";
 import './NewDeck.css';
 
+let currKey = 0;
+
 export default function NewDeck() {
     const dispatch = useDispatch();
     const allTopics = useSelector(selectAllTopics);
@@ -12,7 +14,7 @@ export default function NewDeck() {
 
     const [ cards, setCards ] = useState([
                                             <NewCard 
-                                                key={0} 
+                                                key={currKey} 
                                                 id={0}
                                                 changeFrontCard={changeFrontCard} 
                                                 changeBackCard={changeBackCard} 
@@ -27,14 +29,11 @@ export default function NewDeck() {
                                                     }
                                                 ]);
 
-    console.log('Decks: ', decks);
-    console.log('Cards: ', cards);
-
     const clearForm = target => {
         target.name.value = '';
         target.topic.value = '';
         setCards(prevCards => ([
-                    <NewCard key={prevCards.length + 1} 
+                    <NewCard key={++currKey} 
                         id={0}
                         changeFrontCard={changeFrontCard} 
                         changeBackCard={changeBackCard} 
@@ -102,7 +101,7 @@ export default function NewDeck() {
         setCards(prevCards => [
             ...prevCards,
             <NewCard 
-                key={prevCards.length} 
+                key={++currKey} 
                 id={prevCards.length}
                 changeFrontCard={changeFrontCard} 
                 changeBackCard={changeBackCard} 
