@@ -1,4 +1,4 @@
-# Weather App
+# Flashcard App
 
 An app that allows users create decks and play with them to see how much they can remember of a deck.
 
