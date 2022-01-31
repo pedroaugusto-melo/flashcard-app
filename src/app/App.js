@@ -20,7 +20,7 @@ function App() {
       }
       
       <Routes>
-        <Route exact path="/" element={null} />
+        <Route exact path="/" element={<Decks />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/new-deck" element={<NewDeck />} />
         <Route path="/decks" element={<Decks />} />
