@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './Deck.css';
 
 export default function Deck(props) {
-    const { deck } = props;
+    const { deck, delDeck } = props;
     const topics = useSelector(selectAllTopics);
 
     const getTopicEmoji = (topicName) => {
@@ -19,25 +19,37 @@ export default function Deck(props) {
         return emoji;
     }
 
-    return (
-        <div className="Deck">
-            <div className="deck-header">
-                <h2>{getTopicEmoji(deck.topic)}</h2>
-                <h3>{deck.name}</h3>
-            </div>
-            
-            <div className="deck-content">
-                <h4><span>Topic:</span> {deck.topic}</h4>
-                <h4><span>Cards:</span> {deck.cards.length}</h4>
-            </div>
+    const handleDelete = () => {
+        delDeck(deck.id);
+    }
 
-            <button>
+    return (
+        <>
+            <div className="Deck">
+                <div className="deck-header">
+                    <h4 
+                        id="delete"
+                        onClick={handleDelete}
+                    >
+                        🗑️
+                    </h4>
+                    <h2>{getTopicEmoji(deck.topic)}</h2>
+                    <h3>{deck.name}</h3>
+                </div>
+                
+                <div className="deck-content">
+                    <h4><span>Topic:</span> {deck.topic}</h4>
+                    <h4><span>Cards:</span> {deck.cards.length}</h4>
+                </div>
+
                 <Link 
                     style={{textDecoration: 'none', color: '#FFFFFF'}} 
                     to={`/game?id=${deck.id}`}>
-                    Start
+                        <button>Start</button>
                 </Link>
-            </button>
-        </div>
+                
+
+            </div>
+        </>
     );
 }

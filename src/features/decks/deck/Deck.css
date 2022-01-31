@@ -6,6 +6,14 @@
     flex-direction: column;
     row-gap: 20px;
     padding: 27.5px 12.5px;
+    position: relative;
+}
+
+#delete {
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 10px;
 }
 
 .deck-header h2 {

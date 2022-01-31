@@ -30,6 +30,12 @@ const decksSlice = createSlice({
     reducers: {
         addDeck: (state, action) => {
             state.push(action.payload);
+        },
+
+        deleteDeck: (state, action) => {
+            const decksIds = state.map(deck => deck.id);
+            const idxToDelete = decksIds.indexOf(action.payload);
+            state.splice(idxToDelete, 1);
         }
     }
 });
@@ -37,5 +43,5 @@ const decksSlice = createSlice({
 const selectDecks = state => state.decks;
 
 export { selectDecks };
-export const { addDeck } = decksSlice.actions;
+export const { addDeck, deleteDeck } = decksSlice.actions;
 export default decksSlice.reducer;

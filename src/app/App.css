@@ -48,4 +48,17 @@ input {
   font-family: 'Arvo', serif;
 }
 
+button:hover, input[type='submit']:hover, .deck-header h4 {
+  cursor: pointer;
+}
+
+form h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.menu-text:hover {
+  text-decoration: underline;
+}
+
 

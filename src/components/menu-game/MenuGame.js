@@ -6,8 +6,9 @@ export default function MenuGame() {
     return (
         <header className="MenuGame">
             <nav>
-                <Link to="/decks">
-                    <img alt="Exit" src={btnExit}/>
+                <Link className='menu-item' style={{color: '#FFFFFF', textDecoration: 'none'}} to="/decks">
+                    <img alt="Exit" src={btnExit} />
+                    <span className="menu-text">Exit</span>
                 </Link>
             </nav>
         </header>

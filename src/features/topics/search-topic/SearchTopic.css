@@ -3,6 +3,7 @@
     margin: 10px auto;
     border: 1px solid #ADB5BD;
     width: 85%;
+    max-width: 400px;
     height: 40px;
     font-size: 18px;
     padding: 5px 10px;

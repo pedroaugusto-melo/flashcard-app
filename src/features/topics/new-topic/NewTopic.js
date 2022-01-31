@@ -18,17 +18,25 @@ export default function NewTopic() {
         event.preventDefault();
         setPickerVisible(prevVisibility => !prevVisibility);
     };
+
+    const topicAlreadyExists = newTopicName => {
+        return topics.find(topic => topic.name === newTopicName);
+    }
     
     const handleSubmit = event => {
         event.preventDefault();
-        
-        dispatch(addTopic({
-            id: topics.length + 1,
-            name: event.target.name.value,
-            emoji: document.getElementById('current-emoji').innerHTML
-        }));
 
-        clearForm(event.target);
+        if(!topicAlreadyExists(event.target.name.value)){
+            dispatch(addTopic({
+                id: topics.length + 1,
+                name: event.target.name.value,
+                emoji: document.getElementById('current-emoji').innerHTML
+            }));
+
+            clearForm(event.target);
+        } else {
+            window.alert('This topic\'s name already exists!');
+        }
     };
 
     const handleEmojiClick = (event, emoji) => {

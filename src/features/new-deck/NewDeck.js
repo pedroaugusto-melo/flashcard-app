@@ -49,20 +49,28 @@ export default function NewDeck() {
         ]);
     };
 
+    const deckNameAlreadyExists = newDeckName => {
+        return decks.find(deck => deck.name === newDeckName);
+    };
+
     const handleSubmit = event => {
         event.preventDefault();
-        dispatch(addDeck({
-            id: decks.length + 1,
-            name: event.target.name.value,
-            topic: event.target.topic.value,
-            cards: cardsData.filter(cardData => {
-                                        return ({
-                                            front: cardData.front,
-                                            back: cardData.back
-                                        });
-                                    })
-        }));
-        clearForm(event.target);
+        if(!deckNameAlreadyExists(event.target.name.value)){
+            dispatch(addDeck({
+                id: decks.length + 1,
+                name: event.target.name.value,
+                topic: event.target.topic.value,
+                cards: cardsData.filter(cardData => {
+                                            return ({
+                                                front: cardData.front,
+                                                back: cardData.back
+                                            });
+                                        })
+            }));
+            clearForm(event.target);
+        } else {
+            window.alert('This deck\'s name already exists!');
+        }
     };
 
     function changeFrontCard(id, frontText) {

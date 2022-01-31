@@ -11,3 +11,20 @@
     align-items: center;
     justify-content: space-around;
 }
+
+.menu-text {
+    display: none;
+}
+
+@media only screen and (min-width: 760px) {
+    .menu-text {
+        display: block;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+    }
+}

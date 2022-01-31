@@ -28,7 +28,6 @@ export default function GameCard(props) {
     const handleNextCard = () => {
         if(remembered !== null) {
             nextCard(remembered);
-            
             if(messageError) document.removeChild(messageError);
             messageError = '';
         } else {

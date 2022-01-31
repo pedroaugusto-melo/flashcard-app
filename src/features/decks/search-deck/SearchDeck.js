@@ -8,14 +8,15 @@ export default function SearchDeck(props) {
     const [findDeck, setFindDeck] = useState('');
     const decks = useSelector(selectDecks);
 
+    function getVisibleDecks(searchTerm) {
+        return decks.filter(deck => (
+            deck.name.includes(searchTerm)
+        ));
+    }
+
     const handleInputChange = ({ target }) => {
         setFindDeck(target.value);
-
-        const visibleDecks = decks.filter(deck => ( 
-            deck.name.includes(target.value)
-        ));
-        
-        changeVisibleDecks(visibleDecks);
+        changeVisibleDecks(getVisibleDecks(target.value));
     };
 
     return (
