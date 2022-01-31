@@ -7,24 +7,24 @@ const decksSlice = createSlice({
             id: 1,
             name: 'JavaScript',
             topic: 'Code',
-            cards: [{front: 'question1', back: 'answer1'},
-                    {front: 'question2', back: 'answer2'}]
+            cards: [{front: 'What is React?', back: 'A JavaScript library that facilites the creation of Web Apps'},
+                    {front: 'JavaScript is typed?', back: 'No'}]
         },
 
         {
             id: 2,
             name: 'Foods',
             topic: 'English',
-            cards: [{front: 'question1', back: 'answer1'},
-                    {front: 'question2', back: 'answer2'},
-                    {front: 'question3', back: 'answer3'}]
+            cards: [{front: 'Soup', back: 'Sopa'},
+                    {front: 'Steak', back: 'Filé'},
+                    {front: 'Carrot', back: 'Cenoura'}]
         },
 
         {
             id: 3,
             name: 'Verbs',
             topic: 'English',
-            cards: [{front: 'question1', back: 'answer1'}]
+            cards: [{front: 'Borrow', back: 'Emprestar'}]
         }
     ],
     reducers: {

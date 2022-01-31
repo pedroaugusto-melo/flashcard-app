@@ -1,0 +1,64 @@
+.GameCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.GameCard h3 {
+    font-weight: 400;
+}
+
+.GameCard .card-body{
+    box-sizing: border-box;
+    background-color: #C4C4C4;
+    width: 70%;
+    border-radius: 20px;
+    height: 300px;
+    overflow: scroll;
+    padding: 0 10px;
+}
+
+.card-body h4 {
+    margin: 15px;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.card-body p {
+    margin: 40px 0;
+}
+
+button {
+    border: 0;
+    border-radius: 20px;
+    background-color: #0077B6;
+    color: #FFFFFF;
+}
+
+.show-answer {
+    margin-top: 10px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.card-btns {
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-btns button {
+    padding: 7.5px 20px;
+    font-size: 14px;
+}
+
+.next-card {
+    margin-top: 12.5px;
+    padding: 12.5px 25px;
+    font-size: 16px;
+    font-weight: 700;
+}
